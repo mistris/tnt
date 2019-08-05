@@ -63,6 +63,8 @@ abstract class AbstractService {
      * @var bool
      */
     private $verifySSL = true;
+
+    protected $content;
     
     /**
      * Get TNT service URL
@@ -219,17 +221,19 @@ abstract class AbstractService {
         return $this->xml->writeRaw($xml);
         
     }
-    
+
     /**
      * Get XML content
-     * 
+     *
      * @return string
      */
     protected function getXmlContent()
     {
-        
-        return $this->xml->flush(false);
-        
+        if(!$this->content) {
+            $this->content = $this->xml->flush(true);
+        }
+
+        return $this->content;
     }
     
     /**
