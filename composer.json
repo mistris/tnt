@@ -1,5 +1,5 @@
 {
-    "name": "200mph/tnt-express-connect",
+    "name": "mistris/tnt-express-connect",
     "type": "library",
     "description": "TNT ExpressConnect (API) client",
     "keywords": ["tnt", "tnt express connect", "tnt tracking", "tnt shipping"],
